@@ -4,547 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mont Propre - Édition Limitée</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --bleu-marine: #1a3a52;
-            --vert-kaki: #7a8450;
-            --beige: #f5f3ed;
-            --blanc: #ffffff;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--bleu-marine);
-            line-height: 1.6;
-        }
-
-        /* Header avec photo de classe en fond */
-        header {
-            background: linear-gradient(rgba(26, 58, 82, 0.75), rgba(26, 58, 82, 0.85)), 
-                        url('VOTRE_PHOTO_CLASSE.jpg') center/cover;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            color: var(--blanc);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            background: rgba(122, 132, 80, 0.8);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .logo {
-            width: 120px;
-            height: 120px;
-            background: transparent;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: var(--bleu-marine);
-            transition: transform 0.3s;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        .logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 0;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--bleu-marine);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-            font-size: 1rem;
-        }
-
-        .nav-links a:hover {
-            color: var(--vert-kaki);
-        }
-
-        .hero {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            background: var(--vert-kaki);
-            color: var(--blanc);
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-
-        /* Carrousel */
-        .carousel-section {
-            padding: 4rem 5%;
-            background: var(--beige);
-        }
-
-        .carousel-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--bleu-marine);
-        }
-
-        .carousel {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .carousel-container {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .carousel-slide {
-            min-width: 100%;
-            height: 500px;
-            background: var(--blanc);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: var(--bleu-marine);
-        }
-
-        .carousel-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(122, 132, 80, 0.8);
-            color: white;
-            border: none;
-            padding: 1rem;
-            cursor: pointer;
-            font-size: 1.5rem;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .carousel-btn:hover {
-            background: var(--vert-kaki);
-        }
-
-        .carousel-btn.prev {
-            left: 10px;
-        }
-
-        .carousel-btn.next {
-            right: 10px;
-        }
-
-        /* Produit en édition limitée */
-        .produit-section {
-            padding: 4rem 5%;
-            background: var(--blanc);
-        }
-
-        .produit-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .produit-image {
-            position: relative;
-        }
-
-        .produit-image img {
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .edition-badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: #e74c3c;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-weight: bold;
-            transform: rotate(15deg);
-        }
-
-        .produit-info h2 {
-            font-size: 2.5rem;
-            color: var(--bleu-marine);
-            margin-bottom: 1rem;
-        }
-
-        .produit-info p {
-            margin-bottom: 1.5rem;
-            color: #666;
-        }
-
-        .prix {
-            font-size: 2rem;
-            color: var(--vert-kaki);
-            font-weight: bold;
-            margin: 1rem 0;
-        }
-
-        /* Section Processus de Fabrication */
-        .fabrication-section {
-            padding: 4rem 5%;
-            background: var(--beige);
-        }
-
-        .fabrication-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .fabrication-content h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--bleu-marine);
-            margin-bottom: 1rem;
-        }
-
-        .fabrication-intro {
-            text-align: center;
-            color: var(--vert-kaki);
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-        }
-
-        .process-timeline {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .process-step {
-            background: var(--blanc);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            position: relative;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .process-step:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-
-        .step-number {
-            position: absolute;
-            top: -20px;
-            left: 20px;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--bleu-marine), var(--vert-kaki));
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-        }
-
-        .step-content h3 {
-            color: var(--bleu-marine);
-            margin: 1rem 0;
-            font-size: 1.3rem;
-        }
-
-        .step-content p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Section Notre Équipe */
-        .equipe-section {
-            padding: 4rem 5%;
-            background: #2d2d2d;
-            color: var(--blanc);
-        }
-
-        .equipe-content {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .equipe-content h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: 3px;
-        }
-
-        .equipe-subtitle {
-            text-align: center;
-            color: var(--vert-kaki);
-            font-style: italic;
-            margin-bottom: 3rem;
-        }
-
-        .equipe-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .equipe-card {
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .equipe-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .equipe-photo {
-            width: 200px;
-            height: 200px;
-            margin: 0 auto 1.5rem;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid var(--vert-kaki);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-        }
-
-        .equipe-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .equipe-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: var(--blanc);
-        }
-
-        .equipe-card .role {
-            color: #999;
-            font-size: 0.95rem;
-        }
-
-        /* Section Écologie */
-        .ecologie-section {
-            padding: 4rem 5%;
-            background: linear-gradient(135deg, var(--bleu-marine), var(--vert-kaki));
-            color: var(--blanc);
-        }
-
-        .ecologie-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .ecologie-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .ecologie-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .ecologie-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .ecologie-card h3 {
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        /* Contact et Réseaux */
-        .contact-section {
-            padding: 4rem 5%;
-            background: var(--beige);
-        }
-
-        .contact-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-container h2 {
-            font-size: 2.5rem;
-            color: var(--bleu-marine);
-            margin-bottom: 2rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .social-links a {
-            width: 60px;
-            height: 60px;
-            background: var(--bleu-marine);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            font-size: 1.5rem;
-            transition: transform 0.3s, background 0.3s;
-        }
-
-        .social-links a:hover {
-            transform: scale(1.1);
-            background: var(--vert-kaki);
-        }
-
-        .contact-email {
-            margin: 2rem 0;
-        }
-
-        .contact-email a {
-            color: var(--bleu-marine);
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        .contact-email a:hover {
-            color: var(--vert-kaki);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--bleu-marine);
-            color: var(--blanc);
-            padding: 2rem 5%;
-            text-align: center;
-        }
-
-        .footer-links {
-            margin-top: 1rem;
-        }
-
-        .footer-links a {
-            color: var(--blanc);
-            text-decoration: none;
-            margin: 0 1rem;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: var(--vert-kaki);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .produit-container {
-                grid-template-columns: 1fr;
-            }
-
-            .carousel-slide {
-                height: 300px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header avec fond photo de classe -->
     <header>
         <nav>
             <div class="logo">
-                <img src="logo.png" alt="Mont Propre">
-                
+                <img src="./images/logo.png" alt="Mont Propre">
             </div>
             <ul class="nav-links">
                 <li><a href="#carousel">Galerie</a></li>
@@ -565,28 +32,29 @@
     </header>
 
     <!-- Carrousel -->
+    <!-- Remplacer par vos images 
     <section id="carousel" class="carousel-section">
         <h2>Notre Galerie</h2>
         <div class="carousel">
             <div class="carousel-container" id="carouselContainer">
                 <div class="carousel-slide">
-                    <!-- Remplacer par vos images -->
-                    <img src="https://via.placeholder.com/900x500/7a8450/ffffff?text=Image+1" alt="Image 1">
+                    <img src="       Image de la slide 1       " alt="Image 1">
                 </div>
                 <div class="carousel-slide">
-                    <img src="https://via.placeholder.com/900x500/1a3a52/ffffff?text=Image+2" alt="Image 2">
+                    <img src="       Image de la slide 1       " alt="Image 2">
                 </div>
                 <div class="carousel-slide">
-                    <img src="https://via.placeholder.com/900x500/7a8450/ffffff?text=Image+3" alt="Image 3">
+                    <img src="       Image de la slide 1       " alt="Image 3">
                 </div>
                 <div class="carousel-slide">
-                    <img src="https://via.placeholder.com/900x500/1a3a52/ffffff?text=Image+4" alt="Image 4">
+                    <img src="       Image de la slide 1       " alt="Image 4">
                 </div>
             </div>
             <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
             <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
         </div>
     </section>
+    -->
 
     <!-- Produit Édition Limitée -->
     <section id="produit" class="produit-section">
@@ -600,7 +68,7 @@
                 <h2>Nom du Produit</h2>
                 <p>Description de votre produit en édition limitée. Expliquez ce qui le rend unique et spécial. Pourquoi est-ce un produit exclusif ?</p>
                 <p>Caractéristiques principales et avantages de ce produit exceptionnel.</p>
-                <div class="prix">Prix : XX,XX €</div>
+                <div class="prix">Prix : 10,00 €</div>
                 <p style="margin-top: 1.5rem; color: var(--vert-kaki); font-weight: bold;">
                     📍 Disponible sur notre stand au lycée Notre-Dame de la Providence
                 </p>
@@ -702,98 +170,106 @@
             <div class="equipe-grid">
                 <div class="equipe-card">
                     <div class="equipe-photo">
-                        <img src="PHOTO_MEMBRE_1.jpg" alt="Membre 1">
+                        <img src=".\images\ANDRÉ-Malia-service-production.jpg" alt="Membre 1">
                     </div>
-                    <h3>NOM Prénom</h3>
-                    <p class="role">PDG</p>
+                    <h3>ANDRÉ Malia</h3>
+                    <p class="role">Service production</p>
                 </div>
 
                 <div class="equipe-card">
                     <div class="equipe-photo">
-                        <img src="PHOTO_MEMBRE_2.jpg" alt="Membre 2">
+                        <img src=".\images\BAILLY-gabin-service-production.jpg" alt="Membre 2">
                     </div>
-                    <h3>NOM Prénom</h3>
-                    <p class="role">Directeur administratif</p>
+                    <h3>BAILLY gabin</h3>
+                    <p class="role">Service production</p>
                 </div>
 
                 <div class="equipe-card">
                     <div class="equipe-photo">
-                        <img src="PHOTO_MEMBRE_3.jpg" alt="Membre 3">
+                        <img src=".\images\BONAVENTURE-ines-service-production.jpg" alt="Membre 4">
                     </div>
-                    <h3>NOM Prénom</h3>
-                    <p class="role">Entrepreneur</p>
+                    <h3>BONAVENTURE ines</h3>
+                    <p class="role">Service production</p>
                 </div>
 
                 <div class="equipe-card">
                     <div class="equipe-photo">
-                        <img src="PHOTO_MEMBRE_4.jpg" alt="Membre 4">
+                        <img src=".\images\POTREL-Shana-service-production.jpg" alt="Membre 9">
                     </div>
-                    <h3>NOM Prénom</h3>
-                    <p class="role">Entrepreneur</p>
+                    <h3>POTREL Shana</h3>
+                    <p class="role">Service production</p>
                 </div>
 
                 <div class="equipe-card">
                     <div class="equipe-photo">
-                        <img src="PHOTO_MEMBRE_5.jpg" alt="Membre 5">
+                        <img src=".\images\BAZIN-Léo-service-communication.jpg" alt="Membre 3">
                     </div>
-                    <h3>NOM Prénom</h3>
-                    <p class="role">Entrepreneur</p>
+                    <h3>BAZIN Léo</h3>
+                    <p class="role">Service communication</p>
                 </div>
 
                 <div class="equipe-card">
                     <div class="equipe-photo">
-                        <img src="PHOTO_MEMBRE_6.jpg" alt="Membre 6">
+                        <img src=".\images\PREAUX-Clara-service-communication.jpg" alt="Membre 10">
                     </div>
-                    <h3>NOM Prénom</h3>
-                    <p class="role">Entrepreneur</p>
+                    <h3>PREAUX Clara</h3>
+                    <p class="role">Service communication</p>
                 </div>
 
                 <div class="equipe-card">
                     <div class="equipe-photo">
-                        <img src="PHOTO_MEMBRE_7.jpg" alt="Membre 7">
+                        <img src=".\images\FAGUAIS-Paul-service-financier.jpg" alt="Membre 5">
                     </div>
-                    <h3>NOM Prénom</h3>
-                    <p class="role">Entrepreneur</p>
+                    <h3>FAGUAIS Paul</h3>
+                    <p class="role">Service financier</p>
                 </div>
 
                 <div class="equipe-card">
                     <div class="equipe-photo">
-                        <img src="PHOTO_MEMBRE_8.jpg" alt="Membre 8">
+                        <img src=".\images\LETEURTOIS-maelys-service-financier.jpg" alt="Membre 8">
                     </div>
-                    <h3>NOM Prénom</h3>
-                    <p class="role">Entrepreneur</p>
+                    <h3>LETEURTOIS maelys</h3>
+                    <p class="role">Service financier</p>
                 </div>
 
                 <div class="equipe-card">
                     <div class="equipe-photo">
-                        <img src="PHOTO_MEMBRE_9.jpg" alt="Membre 9">
+                        <img src=".\images\JEUAUX-loelia-service-administration.jpg" alt="Membre 6">
                     </div>
-                    <h3>NOM Prénom</h3>
-                    <p class="role">Entrepreneur</p>
+                    <h3>JEUAUX loelia</h3>
+                    <p class="role">Service administration</p>
                 </div>
 
                 <div class="equipe-card">
                     <div class="equipe-photo">
-                        <img src="PHOTO_MEMBRE_10.jpg" alt="Membre 10">
+                        <img src=".\images\LAGOUTTE-Noam-service-administratif.jpg" alt="Membre 7">
                     </div>
-                    <h3>NOM Prénom</h3>
-                    <p class="role">Entrepreneur</p>
+                    <h3>LAGOUTTE Noam</h3>
+                    <p class="role">Service administratif</p>
                 </div>
 
                 <div class="equipe-card">
                     <div class="equipe-photo">
-                        <img src="PHOTO_MEMBRE_11.jpg" alt="Membre 11">
+                        <img src=".\images\marie_jo_photo_.jpg" alt="Membre 11">
                     </div>
-                    <h3>NOM Prénom</h3>
-                    <p class="role">Entrepreneur</p>
+                    <h3>NOM Marie</h3>
+                    <!-- <p class="role">Entrepreneur</p> -->
                 </div>
 
                 <div class="equipe-card">
                     <div class="equipe-photo">
-                        <img src="PHOTO_MEMBRE_12.jpg" alt="Membre 12">
+                        <img src=".\images\mauricette_photo_.jpg" alt="Membre 12">
                     </div>
-                    <h3>NOM Prénom</h3>
-                    <p class="role">Entrepreneur</p>
+                    <h3>NOM Mauricette</h3>
+                    <!-- <p class="role">Entrepreneur</p> -->
+                </div>
+                
+                <div class="equipe-card">
+                    <div class="equipe-photo">
+                        <img src=".\images\véronique_photo_.jpg" alt="Membre 13">
+                    </div>
+                    <h3>NOM Véronique</h3>
+                    <!-- <p class="role">Entrepreneur</p> -->
                 </div>
             </div>
         </div>
