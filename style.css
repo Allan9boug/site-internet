@@ -460,6 +460,11 @@ nav {
     background: var(--vert-kaki);
 }
 
+.logo-site {
+    width: 30px;
+    height: 30px;
+}
+
 .contact-email {
     margin: 2rem 0;
 }
