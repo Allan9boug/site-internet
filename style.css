@@ -218,18 +218,6 @@ nav {
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-.edition-badge {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: #e74c3c;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-weight: bold;
-    transform: rotate(15deg);
-}
-
 .produit-info h2 {
     font-size: 2.5rem;
     color: var(--bleu-marine);
