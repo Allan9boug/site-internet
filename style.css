@@ -197,9 +197,20 @@ nav {
 .produit-section {
     padding: 4rem 5%;
     background: var(--blanc);
+    display: grid;
+    gap: 4rem;
 }
 
-.produit-container {
+.produit-container-left {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.produit-container-right {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
