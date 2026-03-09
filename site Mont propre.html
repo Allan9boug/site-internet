@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mont Propre</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header avec fond photo de classe -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src=".\static/images/logo.png" alt="Mont Propre">
+            </div>
+            <ul class="nav-links">
+                <!-- <li><a href="#carousel">Galerie</a></li> -->
+                <li><a href="#produit">Produit</a></li>
+                <li><a href="#fabrication">Fabrication</a></li>
+                <li><a href="#ecologie">Écologie</a></li>
+                <li><a href="#equipe">Équipe</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://wiki.ndlpavranches.fr/index.php?title=Projets_informatiques_du_lyc%C3%A9e_Notre_Dame_de_La_Providence" target="_blank">Wiki</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero">
+            <h1>Mont Propre</h1>
+            <p>Au Mont Propre, fini le jetable vive le durable.</p>
+            <a href="#produit" class="btn">Découvré nos produit</a>
+        </div>
+    </header>
+
+    <!-- Carrousel -->
+    <!-- Remplacer par vos\static images 
+    <section id="carousel" class="carousel-section">
+        <h2>Notre Galerie</h2>
+        <div class="carousel">
+            <div class="carousel-container" id="carouselContainer">
+                <div class="carousel-slide">
+                    <img src="       Image de la slide 1       " alt="Image 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="       Image de la slide 1       " alt="Image 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="       Image de la slide 1       " alt="Image 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="       Image de la slide 1       " alt="Image 4">
+                </div>
+            </div>
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+            <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+        </div>
+    </section>
+    -->
+
+    <!-- Produit Édition Limitée -->
+    <section id="produit" class="produit-section">
+        <div class="produit-container-left">
+            <div class="produit-image">
+                <img src="./static/produit/unite.jpg" alt="Produit Édition Limitée">
+            </div>
+            <div class="produit-info">
+                <h2>Essuie-tout Unitaire</h2>
+                <p>Réutilisé et fabriqué a partir de tissus recyclés, c'est donc un produit très écologique, nous sommes une mini entreprise de 11 élèves de 1er Pro et STMG, notre but est de fabrique un produit utile tout en étant écologique.</p>
+                <p>Nous reversons 20% de nos bénéfices a l'association Rose en Baie. Nous sommes en partenariat avec le Crédit Agricole, ainsi que le DISFA.</p>
+                <div class="prix">5,00 € unité</div>
+                <p style="margin-top: 1.5rem; color: var(--vert-kaki); font-weight: bold;text-align: right;">
+                    📍 Disponible sur notre stand au lycée Notre-Dame de la Providence
+                </p>
+            </div>
+        </div>
+        <div class="produit-container-left">
+            <div class="produit-image">
+                <img src="./static/produit/lot.jpg" alt="Produit Édition Limitée">
+            </div>
+            <div class="produit-info">
+                <h2>Essuie-tout en lot</h2>
+                <p>Nous vendons aussi des lots de trois essuie-tout, ils ont les mêmes caractéristiques que les essuie-tout unitaires, mais en plus grande quantité.</p>
+                <div class="prix">10,00 € le lots de trois</div>
+                <p style="margin-top: 1.5rem; color: var(--vert-kaki); font-weight: bold;text-align: right;">
+                    📍 Disponible sur notre stand au lycée Notre-Dame de la Providence
+                </p>
+            </div>
+        </div>
+        <div class="produit-container-right">
+            <div class="produit-info">
+                <h2>Nos produit existe en plusieur catégories.</h2>
+            </div>
+            <div class="produit-image">
+                <img src="./static/produit/categorie.jpg" alt="Produit Édition Limitée">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Processus de Fabrication -->
+    <section id="fabrication" class="fabrication-section">
+        <div class="fabrication-content">
+            <h2>Notre Processus de Fabrication</h2>
+            <p class="fabrication-intro">Découvrez comment nous créons nos produits avec soin et responsabilité</p>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Sélection des Matériaux</h3>
+                        <p>Nous choisissons soigneusement des matériaux durables et écologiques pour garantir la qualité de nos produits.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Préparation</h3>
+                        <p>Chaque matériau est préparé et traité avec attention pour assurer une fabrication optimale.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Fabrication Artisanale</h3>
+                        <p>Nos produits sont fabriqués à la main avec passion et expertise par notre équipe dédiée.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Contrôle Qualité</h3>
+                        <p>Chaque produit est inspecté rigoureusement pour garantir qu'il répond à nos standards élevés.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Finitions</h3>
+                        <p>Nous apportons les dernières touches pour que chaque produit soit parfait et prêt à la vente.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Vente sur Stand</h3>
+                        <p>Nos produits sont disponibles directement sur notre stand. Venez nous rencontrer et découvrir nos créations !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Écologie -->
+    <section id="ecologie" class="ecologie-section">
+        <div class="ecologie-content">
+            <h2>Notre Engagement Écologique</h2>
+            <p>Mont Propre s'engage pour l'environnement et la durabilité</p>
+            
+            <div class="ecologie-grid">
+                <div class="ecologie-card">
+                    <h3>🌱 Matériaux Durables</h3>
+                    <p>Nous utilisons des matériaux écologiques et recyclables pour préserver notre planète</p>
+                </div>
+                <div class="ecologie-card">
+                    <h3>♻️ Recyclage</h3>
+                    <p>Nos produits sont conçus pour être recyclés et réutilisés</p>
+                </div>
+                <div class="ecologie-card">
+                    <h3>🌍 Impact Local</h3>
+                    <p>Production locale pour réduire notre empreinte carbone</p>
+                </div>
+                <div class="ecologie-card">
+                    <h3>🌿 Zéro Déchet</h3>
+                    <p>Nous visons une production zéro déchet et respectueuse de l'environnement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Notre Équipe -->
+    <section id="equipe" class="equipe-section">
+        <div class="equipe-content">
+            <h2>NOTRE ÉQUIPE</h2>
+            <p class="equipe-subtitle">Voici les différentes personnes qui représentent cette entreprise.</p>
+            
+            <div class="equipe-grid">
+                <div class="equipe-card">
+                    <div class="equipe-photo">
+                        <img src=".\static\images\ANDRÉ-Malia-service-production.jpg" alt="Membre 1">
+                    </div>
+                    <h3>ANDRÉ Malia</h3>
+                    <p class="role">Service production</p>
+                </div>
+
+                <div class="equipe-card">
+                    <div class="equipe-photo">
+                        <img src=".\static\images\BAILLY-gabin-service-production.jpg" alt="Membre 2">
+                    </div>
+                    <h3>BAILLY gabin</h3>
+                    <p class="role">Service production</p>
+                </div>
+
+                <div class="equipe-card">
+                    <div class="equipe-photo">
+                        <img src=".\static\images\BONAVENTURE-ines-service-production.jpg" alt="Membre 3">
+                    </div>
+                    <h3>BONAVENTURE ines</h3>
+                    <p class="role">Service production</p>
+                </div>
+
+                <div class="equipe-card">
+                    <div class="equipe-photo">
+                        <img src=".\static\images\POTREL-Shana-service-production.jpg" alt="Membre 4">
+                    </div>
+                    <h3>POTREL Shana</h3>
+                    <p class="role">Service production</p>
+                </div>
+
+                <div class="equipe-card">
+                    <div class="equipe-photo">
+                        <img src=".\static\images\BAZIN-Léo-service-communication.jpg" alt="Membre 5">
+                    </div>
+                    <h3>BAZIN Léo</h3>
+                    <p class="role">Service communication</p>
+                </div>
+
+                <div class="equipe-card">
+                    <div class="equipe-photo">
+                        <img src=".\static\images\PREAUX-Clara-service-communication.jpg" alt="Membre 6">
+                    </div>
+                    <h3>PREAUX Clara</h3>
+                    <p class="role">Service communication</p>
+                </div>
+
+                <div class="equipe-card">
+                    <div class="equipe-photo">
+                        <img src=".\static\images\FAGUAIS-Paul-service-financier.jpg" alt="Membre 7">
+                    </div>
+                    <h3>FAGUAIS Paul</h3>
+                    <p class="role">Service financier</p>
+                </div>
+
+                <div class="equipe-card">
+                    <div class="equipe-photo">
+                        <img src=".\static\images\LETEURTOIS-maelys-service-financier.jpg" alt="Membre 8">
+                    </div>
+                    <h3>LETEURTOIS maelys</h3>
+                    <p class="role">Service financier</p>
+                </div>
+
+                <div class="equipe-card">
+                    <div class="equipe-photo">
+                        <img src=".\static\images\JEUAUX-loelia-service-administration.jpg" alt="Membre 9">
+                    </div>
+                    <h3>JEUAUX loelia</h3>
+                    <p class="role">Service administration</p>
+                </div>
+
+                <div class="equipe-card">
+                    <div class="equipe-photo">
+                        <img src=".\static\images\LAGOUTTE-Noam-service-administratif.jpg" alt="Membre 10">
+                    </div>
+                    <h3>LAGOUTTE Noam</h3>
+                    <p class="role">Service administratif</p>
+                </div>
+
+                <div class="equipe-card">
+                    <div class="equipe-photo">
+                        <img src=".\static\images\Paloma-PDG.jpg" alt="Membre 11">
+                    </div>
+                    <h3>Paloma</h3>
+                    <p class="role">PDG</p>
+                </div>
+
+                <div class="equipe-card">
+                    <div class="equipe-photo">
+                        <img src=".\static\images\marie_jo_photo_.jpg" alt="Membre 12">
+                    </div>
+                    <h3>Marie</h3>
+                </div>
+
+                <div class="equipe-card">
+                    <div class="equipe-photo">
+                        <img src=".\static\images\mauricette_photo_.jpg" alt="Membre 13">
+                    </div>
+                    <h3>Mauricette</h3>
+                </div>
+                
+                <div class="equipe-card">
+                    <div class="equipe-photo">
+                        <img src=".\static\images\véronique_photo_.jpg" alt="Membre 14">
+                    </div>
+                    <h3>Véronique</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact et Réseaux Sociaux -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2>Nous Contacter</h2>
+            <p>Retrouvez-nous sur notre stand ou contactez-nous !</p>
+            
+            <div style="margin: 2rem 0; padding: 2rem; background: var(--blanc); border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <h3 style="color: var(--bleu-marine); margin-bottom: 1rem;">📍 Notre Stand</h3>
+                <p style="font-size: 1.1rem; color: #666;">
+                    Lycée Notre-Dame de La Providence<br>
+                    Avranches<br>
+                    <strong>Venez nous rencontrer directement sur place !</strong>
+                </p>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/mont_propre/" target="_blank" title="Instagram"><img class="logo-site" src="./static/icons/instagram.png" alt="logo instagram"></a>
+                <a href="https://www.facebook.com/profile.php?id=61581219371188" target="_blank" title="Facebook"><img class="logo-site" src="./static/icons/facebook.png" alt="logo Facebook"></a>
+                <!-- <a href="YOUTUBE" target="_blank" title="YouTube">▶</a> -->
+            </div>
+
+            <div class="contact-email">
+                <p>Email :</p>
+                <a href="mailto:contact@montpropre.fr">contact@montpropre.fr</a>
+            </div>
+
+            <a href="https://wiki.ndlpavranches.fr/index.php?title=Projets_informatiques_du_lyc%C3%A9e_Notre_Dame_de_La_Providence" target="_blank" class="btn">Plus d'informations sur le Wiki</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mont Propre - Notre Dame de La Providence Avranches</p>
+        <div class="footer-links">
+            <!-- <a href="#carousel">Galerie</a> -->
+            <a href="#produit">Produit</a>
+            <a href="#fabrication">Fabrication</a>
+            <a href="#ecologie">Écologie</a>
+            <a href="#equipe">Équipe</a>
+            <a href="#contact">Contact</a>
+            <a href="https://wiki.ndlpavranches.fr/index.php?title=Projets_informatiques_du_lyc%C3%A9e_Notre_Dame_de_La_Providence" target="_blank">Wiki</a>
+        </div>
+    </footer>
+
+    <!-- <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            const container = document.getElementById('carouselContainer');
+            if (n >= totalSlides) currentSlide = 0;
+            if (n < 0) currentSlide = totalSlides - 1;
+            container.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function moveSlide(direction) {
+            currentSlide += direction;
+            showSlide(currentSlide);
+        }
+
+        // Auto-play carrousel
+        setInterval(() => {
+            currentSlide++;
+            showSlide(currentSlide);
+        }, 5000);
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script> -->
+</body>
+</html>
