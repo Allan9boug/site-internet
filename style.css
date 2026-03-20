@@ -20,7 +20,7 @@ body {
 /* Header avec photo de classe en fond */
 header {
     background: linear-gradient(rgba(26, 58, 82, 0.75), rgba(26, 58, 82, 0.85)), 
-                url('VOTRE_PHOTO_CLASSE.jpg') center/cover;
+                url('./static/images/photos_de_groupe.jpeg') center/cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -82,10 +82,10 @@ nav {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     text-align: center;
-    padding: 2rem;
+    padding: 5rem;
 }
 
 .hero h1 {
